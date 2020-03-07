@@ -3,7 +3,7 @@
 #+EMAIL: li.gaoyang@foxmail.com
 
 Emacs org-mode整合了各种工具，以下是一些程序脚本，正在持续更新。要使可以直接在代码块上
- ~C-c C-c~ 来运行，需要在 ~~/.emacs~ 文件中添加相应语言的支持片段，如对于Python
+ ~C-c C-c~ 来运行，需要在 ~.emacs~ 文件中添加相应语言的支持片段，如对于Python
 
 #+BEGIN_SRC emacs-lisp
 (org-babel-do-load-languages
