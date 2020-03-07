@@ -1,0 +1,35 @@
+* 绘制三维函数图像
+
+#+BEGIN_COMMENT
+#+INCLUDE: "./splot.gp" src gnuplot
+#+END_COMMENT
+
+#+BEGIN_SRC gnuplot :exports code
+# set term png font "Times New Roman,15" # 输出到文件
+reset
+set term qt font "Times New Roman,15" # 输出到屏幕
+# set output "splot.png" # 输出文件名
+set xlabel "x" # 设置x坐标轴名称
+set ylabel "y" # 设置y坐标轴名称
+set zlabel "z" # 设置z坐标轴名称
+# set title "U=0.2,{/symbol L}=2.5,T=1e-9,Ns=1024,Nz=1" # 设置标题
+set xrange [-5:5] # 设置x坐标轴范围
+set yrange [-5:5] # 设置y坐标轴范围
+#set zrange [-5:5] # 设置y坐标轴范围
+set ticslevel 0 # 将xy平面移动到z=0
+set isosample 50 # 设置绘图撒点的疏密程度，越大越密
+b = 1
+z1(x, y) = x + y + b # 定义函数z1
+z11(x, y) = x + y # 定义函数z1
+z111(x, y) = x + y - b # 定义函数z1
+z2(x, y) = x**2 + y**2 -3 # 定义函数z2
+# set dgrid3d 100,100
+set hidden3d # 设定不透明
+splot z1(x, y) t "z=x+y+1", z11(x, y) t "z=x+y", z111(x, y) t "z=x+y-1", 0 t "z=0" # 绘制三维图
+#plot y
+# splot "datafile.dat" u 1:2:3 t 'data-file' w l # 使用三列的数据文件
+# set output # 输出
+pause mouse close # 允许鼠标拖动
+#+END_SRC
+
+#+RESULTS:
