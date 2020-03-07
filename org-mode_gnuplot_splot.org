@@ -20,12 +20,12 @@ set ticslevel 0 # 将xy平面移动到z=0
 set isosample 50 # 设置绘图撒点的疏密程度，越大越密
 b = 1
 z1(x, y) = x + y + b # 定义函数z1
-z11(x, y) = x + y # 定义函数z1
-z111(x, y) = x + y - b # 定义函数z1
-z2(x, y) = x**2 + y**2 -3 # 定义函数z2
+z2(x, y) = x + y # 定义函数z2
+z3(x, y) = x + y - b # 定义函数z3
+z4(x, y) = x**2 + y**2 -3 # 定义函数z4
 # set dgrid3d 100,100
 set hidden3d # 设定不透明
-splot z1(x, y) t "z=x+y+1", z11(x, y) t "z=x+y", z111(x, y) t "z=x+y-1", 0 t "z=0" # 绘制三维图
+splot z1(x, y) t "z=x+y+1", z2(x, y) t "z=x+y", z3(x, y) t "z=x+y-1", 0 t "z=0", z4(x, y) # 绘制三维图
 #plot y
 # splot "datafile.dat" u 1:2:3 t 'data-file' w l # 使用三列的数据文件
 # set output # 输出
