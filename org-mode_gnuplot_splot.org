@@ -33,3 +33,6 @@ pause mouse close # 允许鼠标拖动
 #+END_SRC
 
 #+RESULTS:
+
+#+ATTR_HTML: :width 400
+[[file:images/splot.png]]

@@ -11,6 +11,6 @@ Emacs org-mode整合了各种工具，以下是一些程序脚本，正在持续
  '((python . t)))
 #+END_SRC
 
-
+* 目录
 - [[file:org-mode表格相关操作.org][org-mode表格相关操作]]
 - [[file:org-mode_gnuplot_splot.org][org-mode gnuplot 绘制三维图形]]
