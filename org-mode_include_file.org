@@ -1,0 +1,31 @@
+* 包含文件
+** 一般用法
+#+BEGIN_EXAMPLE
+#+INCLUDE: "~/.emacs" src emacs-lisp
+#+END_EXAMPLE
+第一个参数是文件名，第二个参数可选，可以是 ~src, example, export~ 。第三个参数可选，
+给定了用以格式化目录的原码语言。
+** 指定包含的目录级数
+#+END_EXAMPLE
+#+INCLUDE: "~/my-book/chapter2.org" :minlevel 1
+#+END_EXAMPLE
+** 包含特定的行
+#+BEGIN_EXAMPLE
+‘#+INCLUDE: "~/.emacs" :lines "5-10"’	Include lines 5 to 10, 10 excluded
+‘#+INCLUDE: "~/.emacs" :lines "-10"’	Include lines 1 to 10, 10 excluded
+‘#+INCLUDE: "~/.emacs" :lines "10-"’	Include lines from 10 to EOF
+#+END_EXAMPLE
+** 包含指定文件的特定章节
+包含章节“conclusion”的前20行：
+#+BEGIN_EXAMPLE
+#+INCLUDE: "./paper.org::*conclusion" :lines 1-20
+#+END_EXAMPLE
+** 用ID来引用
+只包含自定义ID“theory”的目录：
+#+BEGIN_EXAMPLE
+#+INCLUDE: "./paper.org::#theory" :only-contents t
+#+END_EXAMPLE
+** 查看包含的文件
+#+BEGIN_EXAMPLE
+C-c ' (org-edit~special)
+#+END_EXAMPLE
