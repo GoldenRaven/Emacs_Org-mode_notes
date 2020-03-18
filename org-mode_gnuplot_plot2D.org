@@ -1,41 +1,20 @@
 * 绘制二维函数图像
+** 示例
+#+INCLUDE: "./plot2D.gp" src gnuplot
 
-#+INCLUDE: "./plot.gp" src gnuplot
+** 自定义横坐标刻度
+set xtics 命令直接规定了每个刻度的位置和显示的字符。每一个刻度对应三个参数：
+显示字符、刻度位置、刻度等级。刻度等级为 0 时表示主刻度，等级为 1 时表示分刻度。
+对于主刻度（等级为 0 时），表示等级的参数也可以省略不写。各个刻度的参数之间用逗号隔开。
+如：
+#+BEGIN_SRC gnuplot
+set xtics ("初一" 0, "初二" 1, "初三" 2)
+#+END_SRC
 
-#+BEGIN_SRC gnuplot :exports code :file file.png
-reset
-set term qt font "Times New Roman,20" # 输出到屏幕
-set border 0 # 取消边框
-lw_=1 # 设置默认线条宽度
-set zeroaxis lt -1 lw lw_ # 设置显示位于原点的坐标轴
-
-xmin=-2 # x轴最小范围
-xmax=5 # x轴最大范围
-xtic=1 # x轴刻度间隔
-xarrow=xmax+(xtic/2.0) # x轴箭头位置
-
-ymin=-1 # y轴最大范围
-ymax=5 # y轴最大范围
-ytic=1 # y轴刻度间隔
-yarrow=ymax+(ytic/2.0) # y轴箭头位置
-
-set title "用plot绘制二维图形" offset 0,2*ytic # 设置标题
-set rmargin 10 # 为横坐标箭头设置右空白
-set xrange [xmin:xmax] # 设置x轴范围
-set yrange [ymin:ymax] # 设置y轴范围
-set xtics axis xmin,xtic,xmax offset xtic,0 # 将x刻度显示在坐标轴上，并向右偏移
-set ytics axis ymin,ytic,ymax offset 0,ytic # 将y刻度显示在坐标轴上，并向上偏移
-set arrow 1 from xmax,0 to xarrow,0 filled size 0.2,15,60 lw lw_ # 绘制横轴箭头
-set arrow 2 from 0,ymax to 0,yarrow filled size 0.2,15,60 lw lw_ # 绘制纵轴箭头
-set label 1 "x" at xarrow,-ytic/5.0 font "Times,25" # 设置x轴名称
-set label 2 "y" at -xtic/5.0,yarrow font "Times,25" # 设置y轴名称
-# set xlabel "x" # 设置x坐标轴名称
-# set ylabel "y" # 设置y坐标轴名称
-
-f1(x) = -x + 3 #定义函数
-f2(x) = f1(x) - 1 #定义函数
-f3(x) = f1(x) + 1 #定义函数
-
-plot f1(x) w l lw lw_+1 t 'x+y-3=0', f2(x) w lp lw lw_+1 t 'x+y-3=-1', f3(x) w lp lw lw_+1 t 'x+y-3=1' # 绘制二维图
-pause mouse close # 允许鼠标拖动
+** 调整key（即一般而言的legend）的位置
+#+BEGIN_SRC gnuplot
+set k
+unset k
+set k rightbottem
+set k at 2.07,0.76
 #+END_SRC
