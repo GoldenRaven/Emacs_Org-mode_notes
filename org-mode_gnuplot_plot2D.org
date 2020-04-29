@@ -18,3 +18,8 @@ unset k
 set k rightbottem
 set k at 2.07,0.76
 #+END_SRC
+
+** 自定义数据文件的分隔符
+#+BEGIN_SRC gnuplot
+set datafile separator {"," | whitespace | "\t"}
+#+END_SRC
