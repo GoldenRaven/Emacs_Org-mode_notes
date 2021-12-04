@@ -14,4 +14,7 @@ Emacs org-mode整合了各种工具，以下是一些程序脚本，正在持续
 * 目录
 - [[file:org-mode表格相关操作.org][org-mode表格相关操作]]
 - [[file:org-mode_gnuplot_splot.org][org-mode gnuplot 绘制三维图形]]
-- [[]]
+- [[org-mode_gnuplot_plot2D.org][用org-mode在gnuplot里绘制二维图形]]
+- [[org-mode_include_file.org][在org-mode中包含文件]]
+- [[Writing_technical_documents_in_org-mode.org][在org-mode里写科技论文]]
+- [[org-mode_notes.org][org-mode的一些notes]]
