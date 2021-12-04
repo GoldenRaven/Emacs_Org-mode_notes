@@ -1,0 +1,1532 @@
+# -*- org -*-
+#+title:记录Emacs Org笔记
+#+author: 李高阳
+#+date:continuing
+#+email:li.gaoyang@foxmail.com
+* contents                                                              :toc:
+- [[#org-mode-learning][Org mode learning]]
+  - [[#2018-07-04-wed][<2018-07-04 Wed>]]
+  - [[#org-agenda-2018-09-30-sun][org agenda <2018-09-30 Sun>]]
+  - [[#2020-03-04-wed-org-inline-code-or-verbatim][<2020-03-04 Wed> org inline code or verbatim]]
+- [[#to-keep-track-of-learning-emacs][to keep track of learning Emacs]]
+  - [[#2017-12-22-五][<2017-12-22 五>]]
+  - [[#2017-12-23-六-1640][<2017-12-23 六 16:40>]]
+  - [[#2017-12-25-一-1540][<2017-12-25 一 15:40>]]
+  - [[#2017-12-27-三-2048][<2017-12-27 三 20:48>]]
+  - [[#2017-12-29-fri-2030][<2017-12-29 Fri 20:30>]]
+  - [[#2018-01-11-四][<2018-01-11 四>]]
+  - [[#2018-01-19-五][<2018-01-19 五>]]
+  - [[#2018-01-27-六][<2018-01-27 六>]]
+  - [[#2018-01-31-三][<2018-01-31 三>]]
+  - [[#2018-02-14-三][<2018-02-14 三>]]
+  - [[#2018-02-15-四][<2018-02-15 四>]]
+  - [[#2018-02-24-六][<2018-02-24 六>]]
+  - [[#2018-03-01-四][<2018-03-01 四>]]
+  - [[#2018-03-03-六][<2018-03-03 六>]]
+  - [[#2018-03-07-三][<2018-03-07 三>]]
+  - [[#2018-03-08-四][<2018-03-08 四>]]
+  - [[#2018-03-12-一][<2018-03-12 一>]]
+  - [[#2018-04-05-四][<2018-04-05 四>]]
+  - [[#2018-04-07-六][<2018-04-07 六>]]
+  - [[#2018-04-08-日][<2018-04-08 日>]]
+  - [[#2018-07-15-sun][<2018-07-15 Sun>]]
+  - [[#如何只显示目录2019-09-24-tue][如何只显示目录？<2019-09-24 Tue>]]
+  - [[#录制宏命名宏录制多个宏命名定入emacsm-x-宏名字-以调用宏][录制宏、命名宏、录制多个宏、命名、定入.emacs、M-x 宏名字 以调用宏]]
+
+* Org mode learning :emacs:org:learning:
+** <2018-07-04 Wed>
+*** C-c C-x \             toogle symbols
+*** what
+*** References to document sections
+this is *what
+** org agenda <2018-09-30 Sun>
+- 插入和设置TODO事项的优先级
+  C-c , 插入优先级
+  S-<up>, S-<down> 调整优先级
+- Deadline和Schedule插入
+  C-c C-d 插入 deadline
+  C-c C-s 插入 schedule
+- imestamps中时间的调整
+  * S-<right>/<left>
+  one day forward/backward
+  * S-<down>/<up>
+  one week forward/backward
+  * > / <
+  one month forward/backward
+** <2020-03-04 Wed> org inline code or verbatim
+- =hello= Renders as verbatim （原样输出）
+- ~hello~ Renders as code
+
+* to keep track of learning Emacs :emacs:learning:
+** <2017-12-22 五>
+*** some key bindings
+# link: [[http://www.cr173.com/html/45923_1.html][emacs 快捷键大全]]
+
+- basic
+  - C-x C-w 使用其他文件名另存为文件
+  - C-x C-v 关闭当前缓冲区文件并打开新文件
+  - C-x i 在当前光标处插入文件
+  - C-z 挂起emacs
+
+- 编辑(Editint)
+  - M-n 重复执行后一个命令n次
+  - C-u n 重复执行后一个命令n次
+  - M-Del 删除前一个单词
+  - C-w 移除(kill)标记区域的内容
+  - M-w 复制标记区域的内容
+  - M-y 召回更早的内容 (在kill缓冲区内循环)
+  - C-x C-x 交换光标和标记
+  - C-t 交换两个字符的位置
+  - C-x C-t 交换两行的位
+  - M-u 使从光标位置到单词结尾处的字母变成大写
+  - M-l 与M-u相反
+  - C-x u 撤销前一个命令
+  - M-x revert-buffer RETURN (照着这个输入)撤销上次存盘后所有改动
+  - M-x recover-file RETURN 从自动存盘文件恢复
+  - M-x recover-session RETURN 如果你编辑了几个文件, 用这个恢复
+
+- 在线帮助(Online-Help)
+  - C-h k 显示快捷键绑定的命令和它的作用
+  - [ ] C-h b 显示当前缓冲区所有可用的快捷键
+
+*** DONE 宏命令(Macro-commands) (大致了解)
+    - C-x ( 开始定义宏
+    - C-x ) 结束定义宏
+    - C-x e 运行最近定义的宏
+    - M-n C-x e 运行最近定义的宏n次
+    - M-x name-last-kbd-macro 给最近定义的宏命名(用来保存)
+    - M-x insert-kbd-macro 将已命名的宏保存到文件
+    - M-x load-file 载入宏
+    - M-x flush-lines
+
+*** TODO 编程(Programming)
+    - [ ] M C-\ 自动缩进光标和标记间的区域
+    - [X] M-m 移动光标到行首第一个(非空格)字符
+    - [ ] M-^ 将当前行接到上一行末尾处
+    - [ ] M-; 添加缩进并格式化的注释
+    - [ ] C, C++和Java模式
+    - [X] M-a 移动光标到声明的开始处
+    - [X] M-e 移动光标到声明的结尾处
+    - [ ] M C-a 移动光标到函数的开始处
+    - [ ] M C-e 移动光标到函数的结尾处
+    - [ ] C-c RETURN 将光标移动到函数的开始处并标记到结尾处
+    - [ ] C-c C-q 根据缩进风格缩进整个函数
+    - [ ] C-c C-a 切换自动换行功能
+    - [ ] C-c C-d 一次性删除光标后的一串空格(greedy delete)
+    - [ ] 为了实现下面的一些技术, 你需要在保存源代码的目录里运行”etags
+    - [ ] *.c *.h *.cpp”(或者源代码的其他的扩展名)
+    - [ ] M-.(点) 搜索标签
+    - [ ] M-x tags-search ENTER 在所有标签里搜索(使用正则表达式)
+    - [ ] M-,(逗号) 在tags-search里跳至下一个匹配处
+    - [ ] M-x tags-query-replace 在设置过标签的所有文件里替换文本
+
+*** TODO GDB(调试器)（大致了解）
+    - M-x gdb 在另一个的窗格中打开gdb
+    - 版本控制(Version Control)（以后会用到现在大致了解就可以了）
+    - C-x v d 显示当前目录下所有注册过的文件(show all registered files in this dir)
+    - C-x v = 比较不同版本间的差异(show diff between versions)
+    - C-x v u 移除上次提交之后的更改(remove all changes since last checkin)
+    - C-x v ~ 在不同窗格中显示某个版本(show certain version in different window)
+    - C-x v l 打印日志(print log)
+    - C-x v i 标记文件等待添加版本控制(mark file for version control add)
+    - C-x v h 给文件添加版本控制文件头(insert version control header into file)
+    - C-x v r 获取命名过的快照(check out named snapshot)
+    - C-x v s 创建命名的快照(create named snapshot)
+    - C-x v a 创建gnu风格的更改日志(create changelog file in gnu-style)
+
+*** global key bindings
+    - C-\		toggle-input-method
+    - <C-S-backspace>			kill-whole-line
+    - <C-backspace>			backward-kill-word
+    - C-x ^		enlarge-window
+    - C-x `		next-error
+    - C-x z		repeat
+    - M-!		shell-command
+    - M-$		ispell-word
+    - M-%		query-replace
+    - C-x 4 C-f	find-file-other-window
+    - M-s h r		highlight-regexp
+    - M-s h l		highlight-lines-matching-regexp
+    - M-s h u		unhighlight-regexp
+*** TODO mark
+    - C-@		set-mark-command
+    - C-h SPC		helm-all-mark-rings
+    - C-x C-@		pop-global-mark
+    - C-x C-SPC	        pop-global-mark
+    - C-x C-p		mark-page
+    - C-M-@		mark-sexp
+    - M-@		mark-word
+    - C-M-SPC		mark-sexp
+
+*** DONE [#C] some key bindings in org mode                        :ATTACH:
+   DEADLINE: <2018-02-01 四>
+   :PROPERTIES:
+   :Attachments: test.org
+   :ID:       29bc1b17-09b1-4a01-8f8d-c2a25ed6d1db
+   :END:
+   - State "DONE"       from              [2018-10-03 Wed 20:17]
+check all bindings with C-ha b
+
+- M-RET		org-insert-heading
+- M-h		org-mark-element
+- C-c C-a		org-attach
+- C-c C-d		org-deadline
+- C-c C-e		org-export-dispatch
+- C-c C-j		org-goto
+- C-c C-l		org-insert-link
+- C-c C-o		org-open-at-point
+- C-c C-s		org-schedule
+- C-c C-z		org-add-note
+- C-c !		org-time-stamp-inactive[2017-12-22 五]
+- C-c %		org-mark-ring-push :important:
+- C-c &		org-mark-ring-goto :important:
+- C-c ,		org-priority
+- C-c .		org-time-stamp<2017-12-22 五>
+- C-c -		org-ctrl-c-minus
+- C-c ;		org-toggle-comment
+- C-c ^		org-sort
+- C-c ~		org-table-create-with-table.el
+*** TODO babel [2017-12-22 五]
+- what is this?
+- C-c C-v C-b	org-babel-execute-buffer
+*** others
+- M-RET		org-insert-heading
+- 5个或以上的“-”是一个水平分割符。
+--------------------------------------------------------------------------------
+- 引用文字或代码
+    #+BEGIN_EXAMPLE
+    我常用到的引用文字的标签是#+BEGIN_EXAMPLE / #+END_EXAMPLE ，在这之间的文字会保留原有的格式。
+    对于代码而言，可以用#+BEGIN_SRC SRC_TYPE / #+END_SRC，其中SRC_TYPE用来指定代码的类型，
+    如lisp, java, c, c++等。结合HTMLIZE可以让导出的HTML页面里的代码被按照语法着色。
+    为了保留引文的格式，还可以使用#+BEGIN_VERSE / #+END_VERSE 和#+BEGIN_QUOTE/ #+END_QUOTE.
+    将引文居中排版可以使用#+BEGIN_CENTER / #+END_CENTER.
+    #+END_EXAMPLE
+    #+BEGIN_SRC SRC_TYPE python
+    #!/usr/bin/python2.7
+    #learn basic python
+
+    number=25
+    guess=int(raw_input('Enter a interger'))
+
+    if guess == number:
+        print 'Congratulations'
+        print '(but you do\'nt win any prize)'
+    elif guess < number:
+        print 'No, larger than that.'
+    elif guess> number:
+        print 'No, less than that.'
+
+    print 'Done'
+    #+END_SRC
+- 引用图片
+  用如下方法可以直接在文档内显示图片:
+  #+CAPTION: title for the image
+  #+LABEL: fig:tag_for_img
+      [[/home/ligy/Pictures/Wallpapers/1495698750150.jpg]]
+
+  CAPTION用来指定图片的标题，LABEL用来在文档内部引用这张图片。和表格一样，这两部分都不是必须的。
+*** another webpage
+see the link below:
+[[http://www.360doc.com/content/14/1219/13/20545288_434126794.shtml][Emacs jichu yongfa]]
+Emacs Org mode基础用法
+    核心提示：本文主要讲述Emacs Org mode基础用法相关内容：Emacs Org mode基础用法,尽管
+    Org-mode的功能不断丰富，现在已经可以记笔记，管理个人事务，制定项目计划以及很多其他
+    的用途，但是最初和最基本的功能还是通过大纲(outline)的方式来编辑文档。而且，无论是笔
+    记管理，任务管理还是项目计划的编写，都是以对内容进行高效的组织（organization)为基础
+    的。
+ 1. 用大纲组织内容
+     1. 定义标题
+     2. 大纲相关的快捷键
+         1. 折叠大纲
+         2. 在大纲之间移动
+         3. 基于大纲的编辑
+     3. 大纲的显示方式
+ 2. 超链接和图文混排
+     1. 创建链接
+     2. 内部链接
+     3. 显示图片
+     4. 创建链接
+     5. 内部链接
+     6. 显示图片
+ 3. 轻量级标记语言
+     1. 字体
+     2. 表格
+         1. 创建和转换表格
+         2. 调整和区域移动
+         3. 编辑行和列
+     3. 段落
+     4. 列表
+         1. 列表操作快捷键
+     5. 分隔线
+ 4.  标签
+     1.  tag的作用
+     2.  标记tag
+     3.  预定义tag
+     4.  按tag搜索
+ 5.  导出和发布
+     1.  准备工作
+         1.  文档元数据
+         2.  内容元数据
+         3.  嵌入Html
+         4.  包含文件
+         5.  嵌入 LaTex
+     2.  导出
+     3.  发布
+
+1 用大纲组织内容
+
+尽管Org-mode的功能不断丰富，现在已经可以记笔记，管理个人事务，制定项目计划以及很多其他
+的用途，但是最初和最基本的功能还是通过大纲(outline)的方式来编辑文档。而且，无论是笔记管
+理，任务管理还是项目计划的编写，都是以对内容进行高效的组织（organization)为基础的。
+
+在编辑文档，尤其是大型文档的时候，对内容的组织就显得尤为重要。经常需要在文档中快速定位
+，只关注某一部分的内容， Word之类的编辑器，通过文档结构图来定位文档位置，速度很慢，而且
+很多时候不能满足编辑的需要。尽管Word也提供了“大纲视图”，但是，唉……不说也罢，如果那个功
+能真的好用，也就不需要Omni Outliner了。
+
+Org-mode天然支持大纲视图，通过在文档中定义标题，可以方便的浏览每个小节，从而把握文档的
+总体内容。 Org是基于Outline模式的，它提供了更灵活的编辑结构文件的命令。比如折叠文档，针
+对大纲的编辑功能等，极其强大。
+
+1.1 定义标题
+
+要实现大纲，首先要定义标题。用emacs新建一个orgmode.org，输入如下内容：
+
+    * org-mode
+    ** 大纲
+    正在编写大纲
+    ** 轻量级标记语言
+    * 可以导出其他格式
+    支持html,pdf等格式
+
+注意：
+
+ 1. * 要位于每行的行首
+ 2. * 之后要有一个空格，然后再输入标题
+ 3. 连续几个*就表示是第几级大纲，最多支持10级。
+
+此时看起来应该是这个样子：
+
+觉得没什么出奇的地方，只是改变了一些颜色？其真正的用处在于可以通过大纲操作文档，包括折
+叠，定位和编辑。而这些操作都通过快捷键实现，非常有效率。尤其是对大文档。
+
+**** 大纲相关的快捷键
+
+1.2.1 折叠大纲
++-------------------------------------------------------------------------------------+
+| 快捷  |     命令     |                             说明                             |
+|  键   |              |                                                              |
+|-------+--------------+--------------------------------------------------------------|
+| S-TAB | org-shifttab | 循环切换整个文档的大纲状态（三种状态：折叠，打开下一级，打开 |
+|       |              | 全部）                                                       |
+|-------+--------------+--------------------------------------------------------------|
+| TAB   | org-cycle    | 循环切换光标所在大纲的状态                                   |
++-------------------------------------------------------------------------------------+
+
+1.2.2 在大纲之间移动
++-------------------------------------------------+
+|  快捷键   | 命令 |             说明             |
+|-----------+------+------------------------------|
+| C-c C-n/p |      | 下/上一标题                  |
+|-----------+------+------------------------------|
+| C-c C-f/b |      | 下/上一标题（仅限同级标题）  |
+|-----------+------+------------------------------|
+| C-c C-u   |      | 跳到上一级标题               |
+|-----------+------+------------------------------|
+| C-c C-j   |      | 切换到大纲浏览状态           |
++-------------------------------------------------+
+
+1.2.3 基于大纲的编辑
++----------------------------------------------------------------------------+
+|     快捷键     | 命令 |                        说明                        |
+|----------------+------+----------------------------------------------------|
+| M-RET          |      | 插入一个同级标题                                   |
+|----------------+------+----------------------------------------------------|
+| M-S-RET        |      | 插入一个同级TODO 标题                              |
+|----------------+------+----------------------------------------------------|
+| M-LEFT/RIGHT   |      | 将当前标题升/降级                                  |
+|----------------+------+----------------------------------------------------|
+| M-S-LEFT/RIGHT |      | 将子树升/降级                                      |
+|----------------+------+----------------------------------------------------|
+| M-S-UP/DOWN    |      | 将子树上/下移                                      |
+|----------------+------+----------------------------------------------------|
+| C-c *          |      | 将本行设为标题/正文                                |
+|----------------+------+----------------------------------------------------|
+| C-c C-w        |      | 将子树或区域移动到另一标题处（跨缓冲区）           |
+|----------------+------+----------------------------------------------------|
+| C-x n s/w      |      | 只显示当前子树/返回                                |
+|----------------+------+----------------------------------------------------|
+| C-c C-x b      |      | 在新缓冲区显示当前分支（类似C-x n s)               |
+|----------------+------+----------------------------------------------------|
+| C-c /          |      | 只列出包含搜索结果的大纲，并高亮，支持多种搜索方式 |
+|----------------+------+----------------------------------------------------|
+| C-c C-c        |      | 取消高亮                                           |
++----------------------------------------------------------------------------+
+
+更多的快捷键可以通过C-c C-x C-h查看。
+
+1.3 大纲的显示方式
+
+默认的大纲显示没有缩进，显得有些乱。可以用 M-x org-indent-mode切换到另一种显示方式：
+
+如果想让某个文件默认用这种方式打开，可以在文件头部增加：
+
+    #+STARTUP: indent
+
+如果希望打开所有org文件都默认用这种方式，可以在.emacs中配置：
+
+    (setq org-startup-indented t)
+
+2 超链接和图文混排
+
+超链接也是组织内容的一种非常有效的方式。Org 支持多种超链接。对于符合要求的图片链接，可
+以形成图文混排。
+
+2.1 创建链接
+
+对于符合链接规则的内容，org-mode会自动将其视为链接，包括括文件、网页、邮箱、新闻组、
+BBDB 数据库项、IRC 会话和记录等。下面是一些例子：
+
+    http://www.astro.uva.nl/~dominik            on the web
+    file:/home/dominik/images/jupiter.jpg       file, absolute path
+    /home/dominik/images/jupiter.jpg            same as above
+    file:papers/last.pdf                        file, relative path
+    file:projects.org                           another Org file
+    docview:papers/last.pdf::NNN                open file in doc-view mode at page NNN
+    id:B7423F4D-2E8A-471B-8810-C40F074717E9     Link to heading by ID
+    news:comp.emacs                             Usenet link
+    mailto:adent@galaxy.net                     Mail link
+    vm:folder                                   VM folder link
+    vm:folder#id                                VM message link
+    wl:folder#id                                WANDERLUST message link
+    mhe:folder#id                               MH-E message link
+    rmail:folder#id                             RMAIL message link
+    gnus:group#id                               Gnus article link
+    bbdb:R.*Stallman                            BBDB link (with regexp)
+    irc:/irc.com/#emacs/bob                     IRC link
+    info:org:External%20links                   Info node link (with encoded space)
+
+对于文件链接，可以用::后面增加定位符的方式链接到文件的特定位置。定位符可以是行号或搜索
+选项。如：
+
+    file:~/code/main.c::255                     进入到 255 行
+    file:~/xx.org::My Target                    找到目标'<<My Target>>’
+    file:~/xx.org/::#my-custom-id               查找自定义 id 的项
+
+除了上述的自动链接外，还可以显示指定链接，采用如下格式：
+
+    # [[link][description]]
+    # [[link]]
+
+显示指定的链接可以不显示原始的URL而是显示对该链接的描述。这种方式可以用相对路径链接本地
+文件。
+
+对于显示指定的链接，即可以手工输入，也可以用org-mode提供的快捷键进行编辑：
++--------------------------------------------------------------------+
+| 快捷键  |       命令        |                 说明                 |
+|---------+-------------------+--------------------------------------|
+| C-c l   |                   | 保存链接                             |
+|---------+-------------------+--------------------------------------|
+| C-c C-l | org-insert-link   | 创建或修改链接，可以引用已保存的链接 |
+|---------+-------------------+--------------------------------------|
+| C-c C-o | org-open-at-point | 打开链接                             |
++--------------------------------------------------------------------+
+
++-------------------------------------+
+| C-c % |   | 记录内部链接地址        |
+|-------+---+-------------------------|
+| C-c & |   | 跳转到已记录的内部链接  |
++-------------------------------------+
+
+2.2 内部链接
+
+前面的例子都是外部链接，Org-mode还支持内部链接：
+
+    定义锚点 #<<my-anchor>>
+    [[my-anchor][内部链接]]
+
+脚注可以看作是一种特殊的内部链接，但是要求具有"fn:"前缀：
+
+    # 添加脚注链接 [[fn:footprint1][脚注1]]
+    # 定义脚注 [fn:footprint1]
+
+**** 显示图片
+
+尽管不看重"所见即所得"，但有时候能够看到图文混排的内容还是很有必要的。通过iimage这个
+minor mode，可以在Org-mode中显示图片。
+
+下载 iimage.el 文件扔到 Emacs 的目录里，然后在 .emacs 里添加下面的代码：
+
+    ;; iimage mode
+    (autoload 'iimage-mode "iimage" "Support Inline image minor mode." t)
+    (autoload 'turn-on-iimage-mode "iimage" "Turn on Inline image minor mode." t)
+
+然后就可以用命令
+
+M-x iimage-mode RET
+
+在当前模式里启动 iimage 这个 minor mode。
+
+iimage-mode目前只能显示以文件方式链接的图片。
+
+混排超链接也是组织内容的一种非常有效的方式。Org 支持多种超链接。对于符合要求的图片链接
+，可以形成图文混排。
+
+2.4 创建链接
+
+对于符合链接规则的内容，org-mode会自动将其视为链接，包括括文件、网页、邮箱、新闻组、
+BBDB 数据库项、IRC 会话和记录等。下面是一些例子：
+
+    http://www.astro.uva.nl/~dominik            on the web
+    file:/home/dominik/images/jupiter.jpg       file, absolute path
+    /home/dominik/images/jupiter.jpg            same as above
+    file:papers/last.pdf                        file, relative path
+    file:projects.org                           another Org file
+    docview:papers/last.pdf::NNN                open file in doc-view mode at page NNN
+    id:B7423F4D-2E8A-471B-8810-C40F074717E9     Link to heading by ID
+    news:comp.emacs                             Usenet link
+    mailto:adent@galaxy.net                     Mail link
+    vm:folder                                   VM folder link
+    vm:folder#id                                VM message link
+    wl:folder#id                                WANDERLUST message link
+    mhe:folder#id                               MH-E message link
+    rmail:folder#id                             RMAIL message link
+    gnus:group#id                               Gnus article link
+    bbdb:R.*Stallman                            BBDB link (with regexp)
+    irc:/irc.com/#emacs/bob                     IRC link
+    info:org:External%20links                   Info node link (with encoded space)
+
+对于文件链接，可以用::后面增加定位符的方式链接到文件的特定位置。定位符可以是行号或搜索
+选项。如：
+
+    file:~/code/main.c::255                     进入到 255 行
+    file:~/xx.org::My Target                    找到目标'<<My Target>>’
+    file:~/xx.org/::#my-custom-id               查找自定义 id 的项
+
+除了上述的自动链接外，还可以显示指定链接，采用如下格式：
+
+    # [[link][description]]
+    # [[link]]
+
+显示指定的链接可以不显示原始的URL而是显示对该链接的描述。这种方式可以用相对路径链接本地
+文件。
+
+对于显示指定的链接，即可以手工输入，也可以用org-mode提供的快捷键进行编辑：
++--------------------------------------------------------------------+
+| 快捷键  |       命令        |                 说明                 |
+|---------+-------------------+--------------------------------------|
+| C-c l   |                   | 保存链接                             |
+|---------+-------------------+--------------------------------------|
+| C-c C-l | org-insert-link   | 创建或修改链接，可以引用已保存的链接 |
+|---------+-------------------+--------------------------------------|
+| C-c C-o | org-open-at-point | 打开链接                             |
++--------------------------------------------------------------------+
+
++-------------------------------------+
+| C-c % |   | 记录内部链接地址        |
+|-------+---+-------------------------|
+| C-c & |   | 跳转到已记录的内部链接  |
++-------------------------------------+
+
+2.5 内部链接
+
+前面的例子都是外部链接，Org-mode还支持内部链接：
+
+    # 定义锚点 #<<my-anchor>>
+    # [[my-anchor][内部链接]]
+
+脚注可以看作是一种特殊的内部链接，但是要求具有"fn:"前缀：
+
+    # 添加脚注链接 [[fn:footprint1][脚注1]]
+    # 定义脚注 [fn:footprint1]
+
+2.6 显示图片
+
+尽管不看重"所见即所得"，但有时候能够看到图文混排的内容还是很有必要的。通过iimage这个
+minor mode，可以在Org-mode中显示图片。
+
+下载 iimage.el 文件扔到 Emacs 的目录里，然后在 .emacs 里添加下面的代码：
+
+    ;; iimage mode
+    (autoload 'iimage-mode "iimage" "Support Inline image minor mode." t)
+    (autoload 'turn-on-iimage-mode "iimage" "Turn on Inline image minor mode." t)
+
+然后就可以用命令
+
+M-x iimage-mode RET
+
+在当前模式里启动 iimage 这个 minor mode。
+
+iimage-mode目前只能显示以文件方式链接的图片。
+
+3 轻量级标记语言
+
+前面的大纲和超链接都是使用标记来定义的。实际上，Org现在已经成为一种专门的轻量级标记语言
+，与Markdown、reStructedText、Textile、RDoc、MediaWiki等并列。
+
+相对于重量级标记语言（如html, xml)，轻量级标记语言的语法简单，书写容易。即使不经过渲染
+，也可以很容易阅读。用途越来越广泛。比如，gitHub的README文档除了支持纯文本外，还支持丰
+富的轻量级标记语言，其中就包括Org。
+
+关于这些语言的对比，可以参考这里。下面来看一下Org还支持哪些标记。
+
+**** TODO 字体
+
+- State "TODO"       from              [2019-07-11 Thu 22:41]
+    *粗体*
+    /斜体/
+    +删除线+
+    _下划线_
+    下标： H_2 O
+    上标： E=mc^2
+    等宽字：  =git=  或者 ～git～
+
+**** TODO 表格
+
+- State "TODO"       from              [2019-07-11 Thu 22:40]
+Org 能够很容易地处理 ASCII 文本表格。任何以'|’为首个非空字符的行都会被认为是表格的一部
+分。’|'也是列分隔符。一个表格是下面的样子：
+
+你可能认为要录入这样的表格很繁琐，实际上你只需要输入表头“|Name|Pone|Age”之后，按C-c
+RET,就可以生成整个表格的结构。类似的快捷键还有很多：
+
+3.2.1 创建和转换表格
+| 快捷键 | 命令 | 说明             |
+|--------+------+------------------|
+| C-c    | 竖线 | 创建或转换成表格 |
+| a      | b    | c                |
+
+3.2.2 调整和区域移动
+| 快捷键  | 命令 | 说明                         |
+|---------+------+------------------------------|
+| C-c C-c |      | 调整表格，不移动光标         |
+|---------+------+------------------------------|
+| S-TAB   |      | 移动到上一区域               |
+|---------+------+------------------------------|
+| RET     |      | 移动到下一行，必要时新建一行 |
+
+3.2.3 编辑行和列
+| 快捷键         | 命令 | 说明                             |
+|----------------+------+----------------------------------|
+| M-LEFT/RIGHT   |      | 移动列                           |
+|----------------+------+----------------------------------|
+| M-UP/DOWN      |      | 移动行                           |
+|----------------+------+----------------------------------|
+| M-S-LEFT/RIGHT |      | 删除/插入列                      |
+|----------------+------+----------------------------------|
+| M-S-UP/DOWN    |      | 删除/插入行                      |
+|----------------+------+----------------------------------|
+| C-c -          |      | 添加水平分割线                   |
+|----------------+------+----------------------------------|
+| C-c RET        |      | 添加水平分割线并跳到下一行       |
+|----------------+------+----------------------------------|
+| C-c ^          |      | 根据当前列排序，可以选择排序方式 |
+
+**** TODO 段落
+
+- State "TODO"       from              [2019-07-11 Thu 22:42]
+对于单个回车换行的文本，认为其属于同一个段落。在导出的时候将会转化为不换行的同一段。如
+果要新起一个段落，需要留出一个空行。这点与MediaWiki类似。
+
+**** TODO 列表 :important:
+
+- State "TODO"       from              [2019-07-11 Thu 22:45]
+Org 能够识别有序列表、无序列表和描述列表。
+
+  * 无序列表项以'-’、'+’或者'*'开头。
+  * 有序列表项以'1.’或者'1)’开头。
+  * 描述列表用'::’将项和描述分开。
+  * 有序列表和无序列表都以缩进表示层级。只要对齐缩进，不管是换行还是分块都认为是处于当
+    前列表项。
+
+同一列表中的项的第一行必须缩进相同程度。当下一行的缩进与列表项的的开头的符号或者数字相
+同或者更小时，这一项就结束了。当所有的项都关上时，或者后面有两个空行时，列表就结束了。
+例如：
+
+      My favorite scenes are (in this order)
+      1. The attack of the Rohirrim
+      2. Eowyn's fight with the witch king
+          + this was already my favorite scene in the book
+          + I really like Miranda Otto.
+      Important actors in this film are:
+      - Elijah Wood :: He plays Frodo
+      - Sean Austin :: He plays Sam, Frodo's friend.
+
+3.4.1 列表操作快捷键
+
+为了便利，org-mode也支持很多列表操作的快捷键，大部分都与大纲的快捷键类似：
+| 快捷键         | 命令 | 说明                      |
+| 快捷键         | 命令 | 说明                      |
+|----------------+------+---------------------------|
+| TAB            |      | 折叠列表项                |
+|----------------+------+---------------------------|
+| M-RET          |      | 插入项                    |
+|----------------+------+---------------------------|
+| M-S-RET        |      | 插入带复选框的项          |
+|----------------+------+---------------------------|
+| M-S-UP/DOWN    |      | 移动列表项                |
+|----------------+------+---------------------------|
+| M-LEFT/RIGHT   |      | 升/降级列表项，不包括子项 |
+|----------------+------+---------------------------|
+| M-S-LEFT/RIGTH |      | 升/降级列表项，包括子项   |
+|----------------+------+---------------------------|
+| C-c C-c        |      | 改变复选框状态            |
+|----------------+------+---------------------------|
+| C-c -          |      | 更换列表标记（循环切换）  |
+
+**** TODO 分隔线
+
+- State "TODO"       from              [2019-07-11 Thu 22:52]
+五条短线或以上显示为分隔线。
+
+4 标签
+
+4.1 tag的作用
+
+对于信息的管理，有分类(category)和标签(tag)两种方式。这两种方式各有特点：
+
+通常分类是固定的，很少变化，而tag随时可以增加。分类通常表现为树状结构，比较清晰，但是树
+状结构过于简单，不能表达复杂的信息。比如，如果有多个分类树，处理起来就会比较麻烦。
+
+所以，这两种方式通常结合起来使用。比如blog系统中，通常既支持文章的分类（树），又支持为
+每篇文章作tag标记。
+
+org-mode作为最好的文档编辑利器 ，在支持文内大纲（也是树状结构）的同时，还方便的支持tag
+功能。tag可以在多篇文档中共用。
+
+4.2 标记tag
+
+在Org-mode中，可以对标题增加tag标记。标记的格式如下：
+
+    跟特留尼西特握手                    :苦差:薪水:逃不掉:
+
+而且Org-mode的标签自动按照大纲树的结构继承。即子标题自动继承父标题的标签。比如：
+
+    * Meeting with the French group     :work:
+    ** Summary by Frank                 :boss:notes:
+    *** TODO Prepare slides for him     :action:
+
+则最后一行标题具有 work, boss, notes, action 四个标签。
+
+如果希望文档中的所有标题都具有某些标签，只需要定义文档元数据：
+
+    #+FILETAGS: :Peter:Boss:Secret:
+
+如果手工输入标签，在标题后设置标签，键入:后，M-Tab自动提供标签的补齐。
+
+更方便的做法是在正文部分用C-c C-q 或直接在标题上用C-c C-c创建标签，这种方式可以列出所有
+预定义的标签以便选取。
+
+4.3 预定义tag
+
+上面提到，除了可以输入标签外，还可以从预定义的标签中进行选择。预定义的方式有两种：
+
+  * 在当前文件头部定义
+
+    这种方式预定义的标签只能在当前文件中使用。使用#+TAGS元数据进行标记，如：
+
+        #+TAGS: { 桌面(d) 服务器(s) }  编辑器(e) 浏览器(f) 多媒体(m) 压缩(z)
+
+    每项之间必须用空格分隔，可以在括号中定义一个快捷键；花括号里的为标签组，只能选择一
+    个
+
+    对标签定义进行修改后，要在标签定义的位置按 C-c C-c 刷新才能生效。
+
+  * 在配置文件中定义上面的标签定义只能在当前文件生效，如果要在所有的.org 文件中生效，需
+    要在 Emacs 配置文件 .emacs 中进行定义：
+
+    (setq org-tag-alist '(
+
+                        (:startgroup . nil)
+                             ("桌面" . ?d) ("服务器" . ?s)
+                        (:endgroup . nil)
+                        ("编辑器" . ?e)
+                        ("浏览器" . ?f)
+                        ("多媒体" . ?m)
+                        ))
+
+默认情况下，org会动态维护一个Tag列表，即当前输入的标签若不在列表中，则自动加入列表以供
+下次补齐使用。
+
+为了使这几种情况（默认列表、文件预设tags，全局预设tags）同时生效，需要在文件中增加一个
+空的TAGS定义：
+
+    #+TAGS:
+
+4.4 按tag搜索
+
+使用标签可以更好的管理内容。org-mode提供了以下功能：
++---------------------------------------------------------+
+|  KEYS   |                    COMMENT                    |
+|---------+-----------------------------------------------|
+| C-c \   | 按tag搜索标题                                 |
+|---------+-----------------------------------------------|
+| C-c / m | 搜索并按树状结构显示                          |
+|---------+-----------------------------------------------|
+| C-c a m | 按标签搜索多个文件（需要将文件加入全局agenda) |
++---------------------------------------------------------+
+
+可以使用逻辑表达式限制条件，更准确灵活的搜索
+
+    +     和      a+b     同时有这两个标签
+    -     排除    a-b     有 a 但没有 b
+    |     或      a|b     有 a 或者有 b
+    &     和      a&b     同时有 a 和 b，可以用“+”替代
+
+在查询视图中 C-c C-c 退出
+
+**** TODO 导出和发布
+
+- State "TODO"       from              [2019-07-11 Thu 22:52]
+更多： http://orgmode.org/manual/Exporting.html
+
+Org-mode可以完美的编辑，但是最终文档可能需要发布成其他的格式。 Org-Mode 支持多种文档的
+输出，包括：
+
+  * 文本
+  * 网页
+  * PDF（需要 Latex 支持）
+  * XOXO
+  * FreeMind/Xmind
+  * Docbook
+  * iCalendar（苹果 iCal 文件）
+  * ……
+
+5.1 准备工作
+
+为了更好的发布文档，还需要做一些准备工作。主要是为文档添加一些”元数据“，使得发布的时候
+能更好地识别文档的内容。
+
+***** TODO 文档元数据
+
+- State "TODO"       from              [2019-07-11 Thu 22:57]
+具体包括：
+
+    # #+TITLE:       the title to be shown (default is the buffer name)
+    # #+AUTHOR:      the author (default taken from user-full-name)
+    # #+DATE:        a date, an Org timestamp1, or a format string for format-time-string
+    # #+EMAIL:       his/her email address (default from user-mail-address)
+    #+DESCRIPTION: the page description, e.g. for the XHTML meta tag
+    #+KEYWORDS:    the page keywords, e.g. for the XHTML meta tag
+    #+LANGUAGE:    language for HTML, e.g. 'en’ (org-export-default-language)
+    #+TEXT:        Some descriptive text to be inserted at the beginning.
+    #+TEXT:        Several lines may be given.
+    #+OPTIONS:     H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t ...
+    #+BIND:        lisp-var lisp-val, e.g.: org-export-latex-low-levels itemize
+                   # You need to confirm using these, or configure org-export-allow-BIND
+    #+LINK_UP:     the ``up'' link of an exported page
+    #+LINK_HOME:   the ``home'' link of an exported page
+    #+LATEX_HEADER: extra line(s) for the LaTeX header, like \usepackage{xyz}
+    #+EXPORT_SELECT_TAGS:   Tags that select a tree for export
+    #+EXPORT_EXCLUDE_TAGS:  Tags that exclude a tree from export
+    #+XSLT:        the XSLT stylesheet used by DocBook exporter to generate FO file
+
+其中#+OPTIONS是复合的选项，包括：
+
+    H:         set the number of headline levels for export
+    num:       turn on/off section-numbers
+    toc:       turn on/off table of contents, or set level limit (integer)
+    \n:        turn on/off line-break-preservation (DOES NOT WORK)
+    @:         turn on/off quoted HTML tags
+    ::         turn on/off fixed-width sections
+    |:         turn on/off tables
+    ^:         turn on/off TeX-like syntax for sub- and superscripts.  If
+               you write "^:{}", a_{b} will be interpreted, but
+               the simple a_b will be left as it is.
+    -:         turn on/off conversion of special strings.
+    # f:         turn on/off footnotes like this[1].
+    todo:      turn on/off inclusion of TODO keywords into exported text
+    tasks:     turn on/off inclusion of tasks (TODO items), can be nil to remove
+               all tasks, todo to remove DONE tasks, or list of kwds to keep
+    pri:       turn on/off priority cookies
+    tags:      turn on/off inclusion of tags, may also be not-in-toc
+    <:         turn on/off inclusion of any time/date stamps like DEADLINES
+    *:         turn on/off emphasized text (bold, italic, underlined)
+    TeX:       turn on/off simple TeX macros in plain text
+    LaTeX:     configure export of LaTeX fragments.  Default auto
+    skip:      turn on/off skipping the text before the first heading
+    author:    turn on/off inclusion of author name/email into exported file
+    email:     turn on/off inclusion of author email into exported file
+    creator:   turn on/off inclusion of creator info into exported file
+    timestamp: turn on/off inclusion creation time into exported file
+    d:         turn on/off inclusion of drawers
+
+这些元数据可以根据需要设置。建议放在文档的开头部分。如，本文采用的元数据如下：
+
+    # #+TITLE: org-mode: 最好的文档编辑利器，没有之一
+    # #+AUTHOR:Holbrook Wong
+    # #+EMAIL: wanghaikuo@gmail.com
+    #+KEYWORDS: emacs, org-mode
+    #+OPTIONS: H:4 toc:t
+
+***** Important 内容元数据
+
+- State "Important"  from              [2019-07-11 Thu 23:02]
+通常在行首以“#+”开头，可以有多种用途。
+
+  * 分行区块
+    默认内容不换行，需要留出空行才能换行。定义了分行的区块可以实现普通换行：
+
+        #+BEGIN_VERSE
+         Great clouds overhead
+         Tiny black birds rise and fall
+         Snow covers Emacs
+             -- AlexSchroeder
+        #+END_VERSE
+
+  * 缩进区块
+    通常用于引用，与默认格式相比左右都会留出缩进：
+
+        #+BEGIN_QUOTE
+          缩进区块
+        #+END_QUOTE
+
+  * 居中区块
+
+        #+BEGIN_CENTER
+        Everything should be made as simple as possible, \but not any simpler
+        #+END_CENTER
+
+  * 代码区块
+
+        #+BEGIN_SRC ruby
+          require 'redcarpet'
+          md = Redcarpet.new("Hello, world.")
+          puts md.to_html
+        #+END_SRC
+
+  * 例子
+
+        : 单行的例子以冒号开头
+
+        #+BEGIN_EXAMPLE
+         多行的例子
+         使用区块
+        #+END_EXAMPLE
+
+  * 注释
+    以'#'开头的行被看作注释，不会被导出
+
+    区块注释采用如下写法：
+
+        #+BEGIN_COMMENT
+          块注释
+          ...
+         #+END_COMMENT
+
+  * 表格与图片
+    对于表格和图片，可以在前面增加标题和标签的说明，以方便交叉引用。
+
+    比如在表格的前面添加：
+
+        #+CAPTION: This is the caption for the next table (or link)
+        #+LABEL: tbl:table1
+
+    则在需要的地方可以通过
+
+        \ref{table1}
+
+    来引用该表格。
+
+5.1.3 嵌入Html
+
+对于导出html以及发布，嵌入html代码就很有用。比如下面的例子适用于格式化为cnblogs的代码块
+：
+
+    #+BEGIN_HTML
+      <div class="cnblogs_Highlighter">
+      <pre class="brush:cpp">
+      int main()
+      {
+        return 0;
+      }
+      </pre>
+      </div>
+    #+END_HTML
+
+相当于在cnblogs的网页编辑器中插入"c++"代码。
+
+***** Important 包含文件
+
+- State "Important"  from              [2019-07-11 Thu 23:06]
+当导出文档时，你可以包含其他文件中的内容。比如，想包含你的“.emacs”文件，你可以用：
+
+     #+INCLUDE: "~/.emacs" src emacs-lisp
+
+可选的第二个第三个参数是组织方式（例如，“quote”，“example”，或者“src”），如果是 “src”，
+语言用来格式化内容。组织方式是可选的，如果不给出，文本会被当作 Org 模式的正常处理。用
+C-c ,可以访问包含的文件。
+
+***** Important 嵌入 LaTex
+
+- State "Important"  from              [2019-07-11 Thu 23:09]
+对于需要包含数学符号和特殊方程的科学笔记，Org 模式支持嵌入 LaTeX 代码到文件中。你可以直
+接使用类 TeX 的宏来输入特殊符号，输入方程，或者整个 LaTeX 环境。
+
+    Angles are written as Greek letters \alpha, \beta and \gamma. The mass if
+    the sun is M_sun = 1.989 x 10^30 kg. The radius of the sun is R_{sun} =
+    6.96 x 10^8 m. If $a^2=b$ and $b=2$, then the solution must be either
+    $a=+\sqrt{2}$ or $a=-\sqrt{2}$.
+    \begin{equation}
+    x=\sqrt{b}
+    \end{equation}
+
+特殊设置之后，导出 HTML 时 LaTeX 代码片断会生成图片并包含进来。
+
+5.2 导出
+
+做好准备工作后，就可以导出了。使用命令：
+
+C-c C-e
+
+然后选择相应的格式，就可以导出对应的文件了。
+
+5.3 发布
+
+Org 包含一个发布管理系统，可以配置一个由相互链接的 Org 文件组成的工程项目的自动向 HTML
+转换。你也可以设置 Org，将导出的 HTML 页面和相应的附件如图片，源代码文件等自动上传到服
+务器。
+
+下面是一个例子：
+
+(setq org-publish-project-alist
+     '(("org"
+        :base-directory "~/org/"
+        :publishing-directory "~/public_html"
+        :section-numbers nil
+        :table-of-contents nil
+        :style "<link rel=\"stylesheet\"
+               href=\"../other/mystyle.css\"
+               type=\"text/css\"/>")))
+
+发布相关的命令：
+|-------------------------------------------------+
+|   命令    |                说明                 |
+|-----------+-------------------------------------|
+| C-c C-e C | 提示指明一个项目，将所有的文件发布  |
+|-----------+-------------------------------------|
+| C-c C-e P | 发布包含当前文件的项目              |
+|-----------+-------------------------------------|
+| C-c C-e F | 只发布当前文件                      |
+|-----------+-------------------------------------|
+| C-c C-e E | 发布所有项目                        |
+|-------------------------------------------------+
+
+Org 用时间戳来查看文件是否改变。上面的命令只发布修改过的文件。你可以给它们加上前缀来强
+制重新发布所有的文件。
+** <2017-12-23 六 16:40>
+*** Mark ring navigation:
+- Every buffer remembers the last mark lacation as their only global mark.
+- Every buffer remembers all mark lacation as their lacal marks.
+
+- how to set global mark ring?
+  - C-@		set-mark-command
+  - C-@ C-@		deacivate-mark-command
+- how to navigate between them?
+  - C-u C-SPC           cycle-local-mark-ring
+  - C-u C-SPC C-SPC ... cycle-local-mark-ring
+  - C-x C-SPC           cycle-global-mark-ring
+  - C-x C-SPC C-SPC ... cycle-global-mark-ring
+- notes:
+  - immediately after you type C-u C-<SPC>
+  - type C-<SPC> instead of C-u C-<SPC> to cycle through the mark ring
+  - (setq set-mark-command-repeat-pop t)
+
+*** select shell
+- emacs shell (eshell)
+  - written in Emacs-Lisp
+- Terminal Emulator
+  - M-x term
+  - M-x ansi-term
+  - C-c C-j   switch to line mode
+  - C-c c-k   switch to char mode
+
+*** move the other window
+- M-C-v        down
+- M-C-V        up
+
+*** flush and keep lines
+- select region first!!!
+- flush lines
+- keep lines
+
+** <2017-12-25 一 15:40>
+*** TODO 特殊字符在Emacs正则表达式中的含义：
+"." 匹配除了换行符之外任何单个字符的特殊字符。
+"*" 自身不构成表达式的部分，是个后缀操作符，表示某个前导表达式重复任意次。
+"+" 后缀操作符，与*作用相同。
+"?" 后缀操作符，与"*"作用相似，匹配前导表达式至多出现1次（0次或1次重复）
+"?,+?,??" 是前几个操作符的非贪心变体。正常的/+/?操作符是贪心的，只要总体上能够匹配，
+总是尽可能多的匹配。当有一个紧跟着?时就是非贪心：尽可能少的匹配。如：ab和ab?都能匹配
+a和abbbb，但同时多个匹配对象时，ab将匹配最长有效匹配abbbb，而ab?匹配最短有效匹配，仅
+匹配a。
+
+"{N}" 指定重复次数为N的后缀操作符，前导表达式匹配了N次。
+"{N,M}" 指定重复次数在N和M之间的后缀操作符，前导表达式至少匹配N次，但不超过M次。
+"[ ... ]" 字符集范围，以“［"开始，以"]"结束，在两个方括号中间的字符就是这个集合能匹
+配的全部。可以用"-"放在开始字符与结束字符中间来指定匹配范围，如[a-z]匹配所有小写字母
+。字符集中的特殊字符：通常在字符集中的特殊字符不再特殊，但"]", "-", "^"情况特殊，如
+果想在集中包括"]"必须把它作为字符集中的第一个字符；想包括"-"必须把它作为字符集中的第
+一个或最后一个字符；想包括"^"必须把它放在除第一个字符以外的任何地方。
+"^1" 表示补集合，即匹配的字符是除掉指定的字符外其它所有的字符，"^2"表示匹配除ASCII字
+母和数字外的所有字符。
+"^" 仅匹配在文本中行首的那个空串的特殊字符
+"$" 仅匹配行尾的空串
+"" 引用特殊字符，包括"",如"&dollar;", "["；
+"`" 匹配空串，但仅是接在缓冲区的开始处的。
+"'" 匹配空串，但仅是接在缓冲区的尾部的。
+"=" 匹配空串，但仅在"点"处的。
+"b" 匹配空串，但仅在一个词的开始或者结尾的，如"bfoob"匹配任何作为单独的词出现的foo；
+"bballs?b"匹配作为单独的词出现的ball或balls。
+"B" 匹配空串，但不在词的开始或结尾处。
+" 匹配空串，但仅在词的开始处。仅当一个构成词的字符在缓冲区开始处时"\
+">" 匹配空串，但仅在词的结尾处，仅当缓冲区尾部有构成词的字符时">"匹配缓冲区尾部的空
+串。
+“w" 匹配任何构成词的字符，由语法表决定这些字符是什么。
+"W" 匹配任何非构成词的字符
+"sC" 匹配任何语法是C的字符，这里C是一个指定特定语法类的字符，如"w"为词的构成字符，
+"-"或" "为空白， "."为普通标点符号。
+"SC" 匹配任何字符不属于语法C
+"cC" 匹配任何属于种类C的字符，如"cc"匹配汉字， "cg"匹配希腊字符，用M-x
+describe-categories或查看已知种类。
+"CC" 匹配所有不属于种类C的字符
+
+|产生附加的特殊结构:
+"|" 指定一个选择 A | B 在表达式A与B中间时，首先匹配表达式A，如果匹配失败再匹配表达式
+B。"|"作用于两边最长可能的表达式，但是由"(...)"可以限制"|"的分组能力。
+"(...)"分组结构有三种功能：
+围住"|"的选择项： "(foo|bar)x" 可以匹配foox或者barx
+围住复杂的表达式以实现后缀操作符（如"" "+" "?"）的操作： "ba(na)匹配如bananana等有任
+意个"na"串记录一个已匹配的子串用作后面的参考引用（并不是括号的n分组功能思想的结果）
+实际应用中，“分组功能”与“匹配参考引用”就注意，避免发生冲突，可以使用谨慎的分组"
+(?:...)",谨慎的分组不记录匹配的子串，不能用D来引用，在机械的结合正则表达式的时候有用
+，这样可以为语法目的加入分组，而不用干涉使用者写的分组的个数。
+"D" 匹配和"(...)"结构第D次出现时所匹配的同样的文本。在"(...)"结构结束之后，匹配程序
+保存被这个结构匹配的文本，之后的正则表达式中，可以使用""跟着一个数字D来表示匹配和之
+前匹配结构第D次出现时所匹配的同样的文本。"(.*)1"匹配任何有完全相同的两部分而无换行符
+的串，"(...)"匹配前一半，可以是任意的串，"1"匹配后面的串，但必须和前面的完全相同。
+
+与正则表达式相关的函数：
+
+C-M-s  isearch-forward-regexp向前正则匹配
+C-M-r  isearch-backward-regexp向后正则匹配
+M-x    query-replace-regexp正则查询替换（对于每一次替换都要确认）
+M-x    replace-regext正则替换（直接替换全部匹配的所有，不需要确认）
+
+正则表达式应用实例：
+
+[a]正则搜索内容为"空格"或"<TAB>"：
+按键：C-M-s： \|<tab>
+按键说明：第1个按键为空格" "，第2个按键为"\|"是或者的意思，第3个按键为<TAB>，显示为"^I"。
+Regexp I-search: \|^I
+
+[b]正则搜索内容为"回车"：
+按键：C-M-s：C-q C-j，显示为^J
+Regexp I-search: ^J
+
+[c]正则搜索内容为“Tab制表符“：
+按键：C-M-s：<tab>，显示为^I
+Regexp I-search: ^I
+
+[d]查找IPv4格式的IP地址:
+按键：C-M-s：\\(\[0-9\]\\{1,3\\}\\.\\)\\{3\\}\[0-9\]\\{1,3\\}
+61\.139\.[0-9]\{1,3\}\.[0-9]\{1,3\}
+
+[e]正则替换IP地址：(将所有61.139.*.* 替换为1.2.3.4)
+按键：C-M-%：61\.139\.[0-9]\{1,3\}\.[0-9]\{1,3\}<RET>1.2.3.4
+Query replace regexp (default 61\.139\.[0-9]\{1,3\}\.[0-9]\{1,3\} -> 1.2.3.4:
+
+[f]正则替换：将多个空格或者TAB替换为1个空格
+按键：C-M-%：[ C-q<TAB>]+<RET> <RET>
+Query replacing [ ^I]+ with  : (? for help)
+按键：C-M-%：
+Query replace regexp (default [ ^I]+ ->  ):
+
+[g]正则替换：将从eshell下执行的命令结果拷贝至记录文件中后，替换掉命令结果中的shell命令提示符（ /mnt/sda5d/TDDownload/shell $  替换为 shell# )
+按键：C-M-%：^/.* \$<RET>shell#<RET>
+Query replace regexp (default ^/.* \$ -> shell#):
+
+[h]正则搜索所有"空格+行尾"（行尾以空格结束，在vim中是/ $）：
+按键：C-M-s: +$
+
+[i]正则替换：将多个空行替换为1个空行
+按键：M-x replace-regexp:^C-q C-j $<RET><RET>
+按键说明：^表示以什么开始，C-q C-j联合按键是一个回车，$表示行尾
+Replace regexp (default ^^j$ -> ):
+
+[j]正则替换：使用()()进行分组交换（将单词与冒号的组合abc:进行交换: abc）
+按键：Ｍ-x replace-regexp:\([a-z]\{1,999\}\)\(\:\)<RET>\2 \1<RET>
+按键说明：\(.....\)表示第１个分组，后面可以跟多个分组\(....\)\(.....\)在替换时分别以\1\2\3来表示之前定义的各个分组。
+
+[k]正则替换：将css文件中abc{中间加个空格abc {
+按键：M-x replace-regexp:\([a-z]+\)\({\)<RET>\1 \2<RET>
+按键说明：在\(.....\)编组之间的字符直接用字符即可，不用加上\转义
+
+[l]正则替换：将所有单词的首写字母替换为首写字母大写
+按键：M-x replace-regexp:\(\w+\)<RET>\,(capitalize \1)<RET>
+按键说明：在替换部分\,表示后面跟的不是要用来替换的东西，而是一段lisp程序
+
+[m]正则替换：将所有匹配的文字后面加上一个回车
+按键：M-x replace-regexp:\([a-z]+\)\({\)<RET>\&C-qC-j<RET>
+按键说明：在替换部分用\&表示前面匹配的所有文字
+
+[n]正则替换：将所有匹配的1 1-1 1-1-1替换为#1 #1-1 #1-1-1
+按键：M-x replace-regexp:\(\([0-9]+\-\)*[0-9]+\)<RET>#\1
+原文为：
+1
+1-1
+1-1-1
+asfa saf  232-33, 11-22-33-44
+smesf ijds  101-22-33-23
+替换后：
+#1
+#1-1
+#1-1-1
+asfa saf  #232-33, #11-22-33-44
+smesf ijds  #101-22-33-23
+*** TODO Emacs 中的查找 [2017-12-25 一 19:32]
+最基本的东西
+  * C-s 开始正向查找
+  * C-r 开始方向查找
+        这两个命令进入了查找模式，在 Emacs 中的术语叫做 Incremental Search ，也就是在
+        你输入要查找的字符的时候，同时高亮显示找到的部分。
+在查找模式下的一些操作
+    下面的操作都是先按 C-s 或者 C-r 后，进入 Incremental Search Mode 之后的操作。
+  * C-r , C-s ，分别是向前查找和向后查找当前输入的内容。
+        如果当前内容是空的，也就是说你连续两次输入 C-s ，那么就是 “查找下一个 (Find
+        next)”的操作。第一次是C-s 把你带入了 Incremental Search Mode ，第二次的 C-s
+        表示查找上一次查过的东西。 C-r 类似，只不过方向相反。
+  * C-w 查找光标除所在的单词
+        例如，你可以输入 C-r 然后马上输入 C-w ，光标所在位置的单词就自动变成了要查找
+        的内容。
+        多次输入 C-w 后面的单词就会一个一个的变成了查找内容一部分。
+        C-w 还可以和上面介绍的 C-s C-r 配合使用。C-s 进入 Incremental Search Mode. 然
+        后输入 void f 然后光标会停留在一个 void f 的单词上，也许是 void far ，然后用
+        C-s 或者 C-r 找到某个 void f 的地方，然后 C-w 就可以把 f 后面的单词补全了。
+  * C-y 把光标所在位置到行尾的部分作为查找内容
+        和 C-w 类似，只不过输入的不是一个单词，而是整整一行。
+  * M-y 把 kill ring 中的东西输入为当前要查找的内容
+  * M-c 切换大小写敏感。
+  * M-r 切换是普通查找还是正则表达式查找。
+  * M-e 编辑要查找的内容
+        Incremental Search 会随着用户的输入不断的改变光标的位置，有的时候很讨厌，那么
+        就可以 M-e 编辑要查找的内容，然后按 Enter 回到 Incremetal Search 。
+  * M-n M-p 浏览查找历史纪录
+        可以查找以前查找过的内容。
+  * C-q C-j 查找多行文字。
+        如果你要的查找的内容是多行文字，也就是说，查找内容中含有换行字符 C-j 但是，
+        Enter 键又作为结束查找的操作，一按 Enter 就退出了查找模式了。那么 C-q C-j 可
+        以解决这个问题。可以查看如何输入特殊的控制字符。
+用 Nonincremental Search 查找
+    如果不习惯 Incremetal Search 的方式，那么可以 C-s <RET> ，也就是按了 C-s 之后，马
+    上按一个回车，就用 Nonincremental Search 的方式查找，这种查找方式和普通的编辑器几
+    乎一样。
+使用 moccur 在所有打开的文件内查找
+    本来 M-x occur 可以在一个 buffer 的查找某一个正则表达式。 moccur 提供更加强大的功
+    能。安装了 moccur 之后，如果进入 incremetal 查找功能，除了上面介绍的一些功能，有
+    多了两个新的功能。下面的操作都是先按 C-s 或者 C-r 后进入 Incremental Search Mode
+    之后的操作。
+  * M-o, 小写的 o , 列出来当前 buffer 内的所有查找内容
+  * M-O, 大写的 O , 列出来所有打开的 buffer 中出现的查找内容。
+    安装 moccur 的方法。下载 color-moccur.el，然后按照文件头的提示或者参考 Emacs 安装
+    一个扩展包的方法
+在多个文件中查找
+find-dired
+运行外部命令 find , 产生文件列表，然后进入 dired 模式。
+find-grep-dired
+运行外部命令 find，用 grep 过滤文件， ls 产生目录列表，然后进入 dired 模式，这样列出
+所有包含某些字符的文件列表。可以使用 dired-do-query-replace-regexp 在文件列表中查找并
+替换。可以递归所有子目录。可以用各种条件过滤文件，详细可以查看 find 命令的帮助。
+grep
+在当前目录中查找指定的 regexp 。
+grep-find
+运行 find , grep ，然后产生类似于 compile 的结果，可以查看哪些文件在什么地方包含了匹
+配了指定的 regexp 。用 C-x ` 浏览结果。可以递归所有子目录。，详细可以查看 find 命令的
+帮助。
+dired-do-query-replace-regexp
+在任何 dired 模式下，对于所有带有标记的文件进行查找替换。
+替换
+在 transient mode 下，如果 region 是激活状态下，那么就调用 query-replace-selection ,
+这个函数和 query-replace 几乎完全一样，不同的是， query-replace-selection 用当前选择
+的 region 作为被替换的部分，而不是等用户输入。
+(defun query-replace-selection (to-string &optional delimited start end)
+  "query reqlace the current selection in transient mark mode."
+  (interactive (list
+                (read-from-minibuffer (format "Query replace %s with: "
+                                              (buffer-substring (point) (mark)))
+                                      nil nil nil
+                                      query-replace-to-history-variable
+                                      (buffer-substring (point) (mark))
+                                      t)
+                nil nil nil
+                ))
+  (perform-replace (buffer-substring (point) (mark)) to-string t nil delimited nil nil start end))
+(wcy-define-2bind-transient-mode
+ wcy-query-replace-or-query-replace-selection
+ 'query-replace-selection
+ 'query-replace)
+(global-set-key (kbd "M-%") 'wcy-query-replace-or-query-replace-selection)
+wcy-define-2bind-transient-mode 的定义参见其他编辑技巧中的 C-w 部分。
+;; 在 C-s 进入 incremental search 的时候， 按 M-i ， 替换当前查找内容
+(define-key isearch-mode-map (kbd "M-i") 'isearch-query-replace-current)
+(defun isearch-query-replace-current ()
+  "replace current searching string."
+  (interactive)
+  (let ((case-fold-search isearch-case-fold-search)
+        (from-string isearch-string))
+    (if (not isearch-success)
+        (message "search string not found")
+      (progn
+       (isearch-exit)
+       (goto-char (min (point) isearch-other-end)))
+      ;;(isearch-abort)
+      (perform-replace
+       from-string
+       (read-from-minibuffer (format "Query replace %s with: "
+                                     from-string)
+                             from-string nil nil
+                             query-replace-to-history-variable
+                             from-string
+                             t)
+       t ; query flag
+       isearch-regexp
+       nil))))
+;; 进入 incremental search mode 之后，有些命令可以根据光标所在位置补全要查找内容，
+;; 例如 C-w 可以补全一个词。但是如果按多了 C-w 就不能回退了，而且不能精确定位，
+;; 下面的键绑定重新定义了一些常用的光标移动命令，根据光标移动，自动补齐查找内容，
+;; 例如 C-f 自动补齐光标处的一个字符。
+(define-key isearch-mode-map (kbd "C-e") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "C-a") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "M-e") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "M-a") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "C-M-e") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "C-M-a") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "C-f") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "C-b") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "M-f") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "M-b") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "C-M-f") 'isearch-move-point)
+(define-key isearch-mode-map (kbd "C-M-b") 'isearch-move-point)
+(defun isearch-move-point ()
+  (interactive)
+  (when isearch-success
+    (save-excursion
+      (let ((overriding-terminal-local-map nil)
+            (old-point (or isearch-other-end (point))))
+        (call-interactively (key-binding (this-command-keys)))
+        (setq isearch-string (buffer-substring-no-properties  old-point
+                                                              (point))
+              isearch-message
+              (mapconcat 'isearch-text-char-description
+                         isearch-string "")
+              ;; Don't move cursor in reverse search.
+              isearch-forward (cond
+                               ((< old-point (point)) t)
+                               ((> old-point (point)) nil)
+                               ((= old-point (point)) isearch-forward))
+              )))
+    (isearch-search-and-update)))
+
+** <2017-12-27 三 20:48>
+*** shell command on region
+- M-!		shell-command
+- M-&		async-shell-command
+- M-|		shell-command-on-region
+- C-u M-|       replace the region with output
+*** inset input method
+- C-x RET C-\          Chinese-py
+- 你好,世界 !
+
+** <2017-12-29 Fri 20:30>
+- C-\           toggle-input-method
+- C-_           undo
+- C-0 .. C-9    digit-argument
+- C-x C-o       delete-blank-lines
+- [ ] C-x s     here!!!!!!!!!
+
+** <2018-01-11 四>
+*** complete
+ - C-M-i              complete symbol
+
+** <2018-01-19 五>
+*** DONE company mode backend dabbrev
+ - M-/ complete words in buffer
+
+** <2018-01-27 六>
+- use space instead of tab in c files.
+- show space and tab chars in file, M-x whitespace-mode
+- show space and tab chars in all files, M-x global-whitespace-mode
+- repace all tab to space, M-x whitespace-cleanup
+
+** <2018-01-31 三>
+*** hide-show mode to fold/unfold code
+要想具有折叠代码功能，你有很多选择 “outline-mode”, “allout”, “hide-s
+how” 或者 “folding-mode”，你甚至可以使用"narrowing capabilities"去定制你的折叠
+。不过我是极简约主义者，所以这里介绍的是Emacs自带的HideShow mode.
+For Emacs 21:
+    * C-c @ C-M-s 显示所有的代码
+    * C-c @ C-M-h 折叠所有的代码
+    * C-c @ C-s 显示当前代码区
+    * C-c @ C-h 折叠当前代码区
+    * C-c @ C-c 折叠/显示当前代码区
+
+- M-x hs-minor-mode           enable hs mode first
+- F1                          fold/unfold
+*** flycheck syntax checking
+- M-x flycheck-mode
+
+- KeyBinding
+  C-c ! ?Describe a Flycheck Checker
+  C-c ! C-cCompile using checker
+  C-c ! C-wCopy error point is on to kill ring
+  C-c ! CClear all highlights from buffer
+  C-c ! VReport Flycheck version
+  C-c ! cStart syntax checking current buffer
+  C-c ! eChange Flycheck executable
+  C-c ! iOpen Flycheck info manual
+  C-c ! lList all Flycheck errors
+  C-c ! nJump to next error
+  C-c ! pJump to previous error
+  C-c ! sChange Flycheck checker
+  C-c ! vVerifies the Flycheck checker works
+  C-c ! xDisable Flycheck checker in buffer
+** <2018-02-14 三>
+*** magit ediff
+- magit-status E r              ediffing between two commits.
+** <2018-02-15 四>
+*** preview latex formula in emacs
+- C-c C-p C-p                 preview at point with AucTex
+- C-c C-p C-b                 preview buffer with AucTex
+** <2018-02-24 六>
+*** check spell in buffer
+- M-x flyspell-mode                 check spell
+- C-,                               next error
+- C-.                               correct spell
+*** cursor movement
+- M-r                               goto top/middle/bottom line of the screen
+- C-l              		    move the whole buffer
+*** format like previous line
+- M-x indent-relative               align with first non-whitespace char on the previous line
+- M-x indent-relative-maybe   	    align with first non-whitespace char on the previous line
+** <2018-03-01 四>
+*** sum in emacs file
+cat data|awk '{sum+=$1} END {print "Sum = ", sum}'
+C-x h C-u M-|                awk '{sum+=$1} END {print sum}'
+** <2018-03-03 六>
+*** CDLatex keybindings
+- beg Tab                insert environment
+- env Tab                insert environment
+** <2018-03-07 三>
+*** ace-jump
+- C-c SPC                jump to word
+- C-u C-c SPC            jump to char
+** <2018-03-08 四>
+*** format of commit message
+二、Commit message 的格式
+每次提交，Commit message 都包括三个部分：Header，Body 和 Footer。
+    <type>(<scope>): <subject>
+    // 空一行
+    <body>
+    // 空一行
+    <footer>
+其中，Header 是必需的，Body 和 Footer 可以省略。
+不管是哪一个部分，任何一行都不得超过72个字符（或100个字符）。这是为了避免自动换行影响美观。
+2.1 Header
+Header部分只有一行，包括三个字段：type（必需）、scope（可选）和subject（必需）。
+（1）type
+type用于说明 commit 的类别，只允许使用下面7个标识。
+      + feat：新功能（feature）
+      + fix：修补bug
+      + docs：文档（documentation）
+      + style：格式（不影响代码运行的变动）
+      + refactor：重构（即不是新增功能，也不是修改bug的代码变动）
+      + test：增加测试
+      + chore：构建过程或辅助工具的变动
+如果type为feat和fix，则该 commit 将肯定出现在 Change log 之中。其他情况（docs、chore、style
+、refactor、test）由你决定，要不要放入 Change log，建议是不要。
+（2）scope
+scope用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同。
+（3）subject
+subject是 commit 目的的简短描述，不超过50个字符。
+      + 以动词开头，使用第一人称现在时，比如change，而不是changed或changes
+      + 第一个字母小写
+      + 结尾不加句号（.）
+2.2 Body
+Body 部分是对本次 commit 的详细描述，可以分成多行。下面是一个范例。
+    More detailed explanatory text, if necessary.  Wrap it to
+    about 72 characters or so.
+    Further paragraphs come after blank lines.
+    - Bullet points are okay, too
+    - Use a hanging indent
+有两个注意点。
+（1）使用第一人称现在时，比如使用change而不是changed或changes。
+（2）应该说明代码变动的动机，以及与以前行为的对比。
+2.3 Footer
+Footer 部分只用于两种情况。
+（1）不兼容变动
+如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以
+及变动理由和迁移方法。
+    BREAKING CHANGE: isolate scope bindings definition has changed.
+        To migrate the code follow the example below:
+        Before:
+        scope: {
+          myAttr: 'attribute',
+        }
+        After:
+        scope: {
+          myAttr: '@',
+        }
+        The removed `inject` wasn't generaly useful for directives so there should be no code using it.
+（2）关闭 Issue
+如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue 。
+    Closes #234
+也可以一次关闭多个 issue 。
+    Closes #123, #245, #992
+2.4 Revert
+还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤
+销 Commit 的 Header。
+    revert: feat(pencil): add 'graphiteWidth' option
+    This reverts commit 667ecc1654a317a13331b17617d973392f415f02.
+Body部分的格式是固定的，必须写成This reverts commit &lt;hash>.，其中的hash是被撤销 commit
+的 SHA 标识符。
+如果当前 commit 与被撤销的 commit，在同一个发布（release）里面，那么它们都不会出现在 Change
+log 里面。如果两者在不同的发布，那么当前 commit，会出现在 Change log 的Reverts小标题下面。
+** <2018-03-12 一>
+*** read-only mode
+- C-x C-q                              enable/disable read-only mode
+** <2018-04-05 四>
+*** helm kill multiple buffers
+- select buffers by C-SPC, then M-D
+** <2018-04-07 六>
+*** yafolding
+- enable yafolding mode
+- C-M-Enter
+- C-S-Enter
+** <2018-04-08 日>
+*** origami, hydras config
+** <2018-07-15 Sun>
+- C-u C-u TAB             Switch back to the startup visibility of the buffer
+- C-u C-u C-u TAB         show all
+- C-c C-f                 next heading same level
+- C-c C-b                 previous heading same level
+- C-c C-u                 backward to higher level heading
+- C-c C-x d               insert drawer at point
+:test_drawer:
+hi
+this is in a drawer
+:END:
+** 如何只显示目录？<2019-09-24 Tue>
+- ( 来显示权限
+- 定义宏，标记所有非目录drx
+- k来kill所标记项
+- 目标达成
+** 录制宏、命名宏、录制多个宏、命名、定入.emacs、M-x 宏名字 以调用宏
+- C-x ( 或<F3> 来开始定义宏
+- C-x ) 或<F4> 来结束定义宏
+- M-x name-last-kbd-macro 来命名上一个宏（如命名为aa）
+- M-x aa 来运行宏
+- M-x insert-kbd-macro 来在当前位置写入宏
+- (global-set-key (kbd "C-c a") 'aa) 来定义快捷键
+
++ 或M-x kmacro-name-last-kbd-macro 用C-x C-k n来定义
++ 或M-x kmacro-name-last-kbd-macro 用C-x C-k C-n来浏览
